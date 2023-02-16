@@ -1,10 +1,10 @@
-FROM ruby:2.6.1
+FROM ruby:2.7.5
 
 RUN apt-get update && apt-get install -y nodejs
 
 WORKDIR /app
 
-COPY Gemfile* .
+COPY Gemfile* ./
 
 RUN gem install bundler -v 2.1.4
 
